@@ -1,7 +1,7 @@
-const { of } = require('rxjs')
+const { interval } = require('rxjs')
 
 const sources = {
-    dummy: of(0)
+    dummy: interval(1000)
 }
 
 module.exports = { sources }
