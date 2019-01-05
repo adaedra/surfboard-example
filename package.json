@@ -2,7 +2,7 @@
     "name": "@surfboard/example",
     "version": "0.1.0",
     "dependencies": {
-        "@surfboard/core": "file:../surfboard-core",
+        "@surfboard/core": "^0.2.1",
         "express": "^4.16.4",
         "rxjs": "^6.3.3"
     },
