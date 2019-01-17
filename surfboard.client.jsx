@@ -1,7 +1,7 @@
-import { initialize } from '@surfboard/ui'
-import Widget from '@surfboard/ui/dist/widget'
-import { subscribeTo } from '@surfboard/ui/dist/websocket'
+import { initialize, subscribeTo, Widget, Frame, Layout } from '@surfboard/ui'
 import React from 'react'
+
+import '@surfboard/ui/dist/style.css'
 
 class Dummy extends Widget {
     subscribe() {
@@ -9,10 +9,18 @@ class Dummy extends Widget {
     }
 
     render() {
-        return <div>{this.state.dummy}</div>
+        return <Frame>{this.state.dummy}</Frame>
     }
 }
 
 initialize(() => ({
-    default: <Dummy source="dummy" />
+    default: (
+        <Layout.Row>
+            <Layout.Column>
+                <Dummy source="dummy" />
+                <Dummy source="dummy" />
+            </Layout.Column>
+            <Dummy source="dummy" />
+        </Layout.Row>
+    )
 }))
