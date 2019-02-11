@@ -9,7 +9,7 @@ class Dummy extends Widget {
     }
 
     render() {
-        return <Frame>{this.state.dummy}</Frame>
+        return <Frame>{this.state[this.props.source]}</Frame>
     }
 }
 
@@ -18,7 +18,7 @@ initialize(() => ({
         <Layout.Row>
             <Layout.Column>
                 <Dummy source="dummy" />
-                <Dummy source="dummy" />
+                <Dummy source="http" />
             </Layout.Column>
             <Dummy source="dummy" />
         </Layout.Row>

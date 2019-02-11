@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "dependencies": {
         "@surfboard/core": "^0.4.0",
+        "body-parser": "^1.18.3",
         "express": "^4.16.4",
         "rxjs": "^6.3.3"
     },
